@@ -1,0 +1,85 @@
+/*
+ Theme Name:   Envo Ecommerce Child
+ Theme URI:    
+ Description:  Tema Filho do Tema Envo Ecommerce
+ Author:       Allan
+ Author URI:   
+ Template:     envo-ecommerce
+ Version:      1.0.0
+*/
+
+@import url("../envo-ecommerce/style.css");
+
+.category_title {
+	display: flex;
+	gap: 1.5rem;
+	width: 22rem;
+	align-items: baseline;
+}
+
+.category_title h2 {
+	margin: 3rem 0;
+}
+
+.woocommerce ul.products li.product a img {
+	width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  display: initial;
+  object-fit: contain;
+}
+
+@media (min-width:1200px) {
+	.container {
+		width: 1300px;
+	}
+	
+	.container .page-area article.col-md-8 {
+		width: 75%;
+	}
+
+	.container .page-area #sidebar {
+		width: 25%;
+	}
+
+    /* checkout customization */
+
+    .woocommerce-checkout[name="checkout"] {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .woocommerce-checkout[name="checkout"] #customer_details {
+        display: flex;
+        flex-direction: column;
+        width: 72%;
+    }
+
+    .woocommerce-checkout[name="checkout"] .col-1 {
+        width: 100%;
+    }
+
+    .woocommerce-checkout[name="checkout"] .col-2 {
+        width: 100%;
+    }
+
+    .woocommerce-checkout[name="checkout"] #order_review {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+	.container .page-area .row{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.container .page-area .row ul.products{
+		display: flex;
+		flex-direction: column
+	}
+	
+	.woocommerce ul.products[class*="columns-"] li.product, .woocommerce-page ul.products[class*="columns-"] li.product {
+		width: 100%;
+	}
+}
